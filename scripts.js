@@ -1,12 +1,16 @@
 function cavidades(x){
-	alert("Nº cavidades = " + x);
 }
-function sementes(){
-	alert("Nº sementes = " + document.getElementById('sementes').value);
+function sementes(x){
 }
 function pc(x){
-	alert("Jogar contra pc? " + document.getElementById('pc').value);
+}
+function showDiff(x){
+	if(x.value==="1"){
+		document.getElementById('diffP').style.display = "block";
+	}
+	else {
+		document.getElementById('diffP').style.display = "none";
+	}
 }
 function dificuldade(x){
-	alert("Dificuldade: " + document.getElementById('dificuldade').value);
 }
