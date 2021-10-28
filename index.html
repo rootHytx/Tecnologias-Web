@@ -6,38 +6,59 @@
 		<title>MANCALA</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
-	
-	<body>
-	<h1> MANCALA </h1>
-	
-	<p> Nº cavidades:
-	<input type="radio" id="cavidades2" name="cavidades" value="2" autocomplete="off" onchange="cavidades(this)">
-	<label for="cavidades2"> 2 </label>
-	<input type="radio" id="cavidades3" name="cavidades" value="3" autocomplete="off" onchange="cavidades(this)">
-	<label for="cavidades3"> 3 </label>
-	<input type="radio" id="cavidades6" name="cavidades" value="6" autocomplete="off" onchange="cavidades(this)">
-	<label for="cavidades6"> 6 </label>
-	<input type="radio" id="cavidades9" name="cavidades" value="9" autocomplete="off" onchange="cavidades(this)">
-	<label for="cavidades9"> 9 </label><br>
 
-		
-	<p> Nº inicial de sementes:
-	<input type="number" id="sementes" name="sementes" min="2" max="10" onchange="sementes(this)" autocomplete="off"><br>
-		
-	<p> Jogar contra pc?
-	<input type="radio" id="pc1" name="pc" value="1" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
-	<label for="sim"> Sim </label>
-	<input type="radio" id="pc0" name="pc" value="0" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
-	<label for="nao"> Não </label>
-    
-	<p id="diffP" style="display:none"> Dificuldade:
-	<input type="radio" id="ez" name="dificuldade" value="1" onchange="dificuldade(this)" autocomplete="off">
-	<label for="ez">Fácil</label>
-	<input type="radio" id="mid" name="dificuldade" value="2" onchange="dificuldade(this)" autocomplete="off">
-	<label for="mid">Normal</label>
-	<input type="radio" id="hrd" name="dificuldade" value="3" onchange="dificuldade(this)" autocomplete="off">
-	<label for="hrd">Difícil</label>
+	<div id="entryScreen">
+		<body>
+		<h1>Mancala
+			<div class="loginContainer">
+				<button type="button" id="login" onclick="loginB()" class="button">Login</button>
+				<button type="button" id="register" onclick="registerB()" class="button">Regista-te</button>
+			</div>
+		</h1>
 
-	<script type="text/javascript" src="scripts.js"></script>
-	</body>
+		<p id="cavidades"> Nº cavidades:
+		<input type="radio" id="cavidades2" name="cavidades" value="2" autocomplete="off" onchange="cavidades(this)">
+		<label for="cavidades2"> 2 </label>
+		<input type="radio" id="cavidades3" name="cavidades" value="3" autocomplete="off" onchange="cavidades(this)">
+		<label for="cavidades3"> 3 </label>
+		<input type="radio" id="cavidades6" name="cavidades" value="6" autocomplete="off" onchange="cavidades(this)">
+		<label for="cavidades6"> 6 </label>
+		<input type="radio" id="cavidades9" name="cavidades" value="9" autocomplete="off" onchange="cavidades(this)">
+		<label for="cavidades9"> 9 </label><br>
+		</p>
+			
+		<p id="sementesP"> Nº inicial de sementes:
+		<input type="number" id="sementes" name="sementes" min="2" max="10" onchange="sementes(this)" autocomplete="off"><br>
+		</p>
+			
+		<p id="pc"> Jogar contra pc?
+		<input type="radio" id="pc1" name="pc" value="1" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
+		<label for="sim"> Sim </label>
+		<input type="radio" id="pc0" name="pc" value="0" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
+		<label for="nao"> Não </label>
+		</p>
+	    
+		<p id="diffP" style="display:none"> Dificuldade:
+		<input type="radio" id="ez" name="dificuldade" value="1" onchange="dificuldade(this)" autocomplete="off">
+		<label for="ez">Fácil</label>
+		<input type="radio" id="mid" name="dificuldade" value="2" onchange="dificuldade(this)" autocomplete="off">
+		<label for="mid">Normal</label>
+		<input type="radio" id="hrd" name="dificuldade" value="3" onchange="dificuldade(this)" autocomplete="off">
+		<label for="hrd">Difícil</label>
+		</p>
+
+		<script type="text/javascript" src="scripts.js"></script>
+		</body>
+	</div>
+
+	<div id="registerScreen" style="display:none">
+		<body>
+			<h1>Regista-te</h1>
+			<h3>Regista o teu nome de usuário para manteres os teus resultados</h3>
+		</body>
+	</div>
+
+	<div id="loginScreen" style="display:none">
+	</div>	
+
 </html>

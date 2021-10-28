@@ -1,3 +1,10 @@
+function registerB(){
+	document.getElementById('entryScreen').style.display="none";
+	document.getElementById('registerScreen').style.display = "block";
+}
+function loginB(){
+	document.getElementById('entryScreen').style.display = "none";
+}
 function cavidades(x){
 }
 function sementes(x){
