@@ -43,13 +43,13 @@ body{
 
 #login{
 	position: absolute;
-	top: 0px;
-	right: 227px;
+	top: 0%;
+	right: 11%;
 }
 #register{
 	position: absolute;
-	top: 0px;
-	right: 120px;
+	top: 0%;
+	right: 0%;
 }
 
 h1{
@@ -61,12 +61,17 @@ h1{
 	transform: scale(1.3, 1.3)
 }
 
+#entryScreen{
+	height: 1000px;
+	width: 1000px;
+}
+
 #cavidades{
-	position: absolute;
-	top: 150px;
-	left: 50px;
-	width: 275px;
-	padding: 2px;
+	position: relative;
+	text-align: center;
+	left: 5%;
+	height: 30px;
+	width: 350px;
   	background-color: black;
   	color: ghostwhite;
   	border-style: double;
@@ -75,13 +80,18 @@ h1{
   	border-width: 4px;
   	transform: skewX(-10deg) scale(1.3, 1.3);
 }
+#cav{
+	position: relative;
+	top: -50%;
+}
 
-#sementesP{
-	position: absolute;
-	top: 194px;
-	left: 50px;
-	width: 260px;
-	padding: 2px;
+#sementes{
+	position: relative;
+	text-align: center;
+	top: 1.2%;
+	left: 5%;
+	height: 40px;
+	width: 350px;
   	background-color: black;
   	color: ghostwhite;
   	border-style: double;
@@ -89,14 +99,22 @@ h1{
   	border-color: purple;
   	border-width: 4px;
   	transform: skewX(-10deg) scale(1.3, 1.3);
+}
+#sementesP{
+	position: relative;
+	top: -37%;
+}
+#sementesN{
+	width: 60px;
 }
 
 #pc{
-	position: absolute;
-	top: 239px;
-	left: 50px;
-	width: 265px;
-	padding: 2px;
+	position: relative;
+	text-align: center;
+	top: 2.5%;
+	left: 5%;
+	height: 35px;
+	width: 350px;
   	background-color: black;
   	color: ghostwhite;
   	border-style: double;
@@ -105,7 +123,28 @@ h1{
   	border-width: 4px;
   	transform: skewX(-10deg) scale(1.3, 1.3);
 }
+#pcP{
+	position: relative;
+	top: -35%;
+}
 
 #dificuldade{
-
+	display: none;
+	position: relative;
+	text-align: center;
+	top: 3.7%;
+	left: 5%;
+	height: 35px;
+	width: 350px;
+  	background-color: black;
+  	color: ghostwhite;
+  	border-style: double;
+  	border-radius: 5px;
+  	border-color: purple;
+  	border-width: 4px;
+  	transform: skewX(-10deg) scale(1.3, 1.3);
+}
+#diffP{
+	position: relative;
+	top: -35%;
 }
