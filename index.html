@@ -1,71 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 	
 	<head>
 		<meta charset=UTF-8>
 		<title>MANCALA</title>
 		<link rel="stylesheet" href="style.css">
+		<script src="scripts.js"></script>
 	</head>
 
 	<body>
 		<div id="entryScreen">
-		<h1>Mancala
-			<div class="loginContainer">
+			<h1> <img src="mancalaLogo.png" id="logoMain" alt="logo"></h1>
+			<div class="buttons" id="loginContainer">
 				<button type="button" id="login" onclick="loginB()" class="button">Login</button>
 				<button type="button" id="register" onclick="registerB()" class="button">Regista-te</button>
 			</div>
-		</h1>
-		
-		<div id="cavidades">
-			<p id="cav"> Nº cavidades:
-			<input type="radio" id="cavidades2" name="cavidades" value="2" autocomplete="off" onchange="cavidades(this)">
-			<label for="cavidades2"> 2 </label>
-			<input type="radio" id="cavidades3" name="cavidades" value="3" autocomplete="off" onchange="cavidades(this)">
-			<label for="cavidades3"> 3 </label>
-			<input type="radio" id="cavidades6" name="cavidades" value="6" autocomplete="off" onchange="cavidades(this)">
-			<label for="cavidades6"> 6 </label>
-			<input type="radio" id="cavidades9" name="cavidades" value="9" autocomplete="off" onchange="cavidades(this)">
-			<label for="cavidades9"> 9 </label><br>
-			</p>
-		</div>
+			<div id="options">
+				<div id="cavidades">
+					<p id="cav"> Nº cavidades:
+					<input type="radio" id="cavidades2" name="cavidades" value=2 onchange="cavidades(this)">
+					<label for="cavidades2"> 2 </label>
+					<input type="radio" id="cavidades3" name="cavidades" value=3 onchange="cavidades(this)">
+					<label for="cavidades3"> 3 </label>
+					<input type="radio" id="cavidades6" name="cavidades" value=6 onchange="cavidades(this)">
+					<label for="cavidades6"> 6 </label>
+					<input type="radio" id="cavidades9" name="cavidades" value=9 onchange="cavidades(this)">
+					<label for="cavidades9"> 9 </label><br>
+					</p>
+				</div>
 
-		<div id="sementes">			
-			<p id="sementesP"> Nº inicial de sementes:
-			<input type="number" id="sementesN" name="sementes" min="2" max="10" onchange="sementes(this)" autocomplete="off"><br>
-			</p>
-		</div>
-		
-		<div id="pc">		
-			<p id="pcP"> Jogar contra pc?
-			<input type="radio" id="pc1" name="pc" value="1" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
-			<label for="sim"> Sim </label>
-			<input type="radio" id="pc0" name="pc" value="0" onchange="pc(this)" autocomplete="off" onclick="showDiff(this)">
-			<label for="nao"> Não </label>
-			</p>
-	    </div>
+				<div id="sementes">			
+					<p id="sementesP"> Nº inicial de sementes:
+					<input type="number" id="sementesN" name="sementes" min=2 max=10 onchange="sementes(this)"><br>
+					</p>
+				</div>
+				
+				<div id="pc">		
+					<p id="pcP"> Jogar contra pc?
+					<input type="radio" id="pc1" name="pc" value=1 onchange="playPC(this)" onclick="showDiff(this); showGameStart()">
+					<label for="pc1"> Sim </label>
+					<input type="radio" id="pc0" name="pc" value=0 onchange="playPC(this)" onclick="showDiff(this); showGameStart()">
+					<label for="pc0"> Não </label>
+					</p>
+			    </div>
 
-	    <div id="dificuldade">
-			<p id="diffP"> Dificuldade:
-			<input type="radio" id="ez" name="dificuldade" value="1" onchange="dificuldade(this)" autocomplete="off">
-			<label for="ez">Fácil</label>
-			<input type="radio" id="mid" name="dificuldade" value="2" onchange="dificuldade(this)" autocomplete="off">
-			<label for="mid">Normal</label>
-			<input type="radio" id="hrd" name="dificuldade" value="3" onchange="dificuldade(this)" autocomplete="off">
-			<label for="hrd">Difícil</label>
-			</p>
-		</div>
-
-		<script type="text/javascript" src="scripts.js"></script>
-	  <!--REGISTER SCREEN HERE-->
+			    <div id="dificuldade">
+					<p id="diffP"> Dificuldade:
+					<input type="radio" id="ez" name="dificuldade" value=1 onchange="dificuldade(this)">
+					<label for="ez">Fácil</label>
+					<input type="radio" id="mid" name="dificuldade" value=2 onchange="dificuldade(this)">
+					<label for="mid">Normal</label>
+					<input type="radio" id="hrd" name="dificuldade" value=3 onchange="dificuldade(this)">
+					<label for="hrd">Difícil</label>
+					</p>
+				</div>
+				<div id="gameStart" class="buttons">
+					<button type="button" id="startGame" onclick="gameStart()" class="button">Iniciar Jogo</button>
+				</div>
+			</div>
+			<div id="info" class="info">
+				<button type="button" class="infoButton" id="aboutUs" onclick="aboutUs()">Sobre Nós</button>
+				<button type="button" class="infoButton" id="instructions" onclick="instructions()">Instruções</button>
+			</div>
 	  	</div>
 	  	
-	  	<div id="registerScreen" style="display:none">
+	  	<div id="registerScreen">
 	  		<h1>Regista-te</h1>
 	  		<h3>Regista o teu nome de usuário para manteres os teus resultados</h3>
 	  	</div>
 
-	  	<div id="loginScreen" style="display:none">
-	  	</div>	
+	  	<div id="loginScreen">
+	  	</div>
+
+	  	<div id="aboutUsPage">
+	  		<div id="ricardo">
+	  			<img id="ricardoPhoto" src="ricardo.png" height="200" alt="Ricardo Joaquim">
+	  			<p id="ricardoID"> Ricardo Joaquim <br><br>
+	  				up201906931<br><br>
+	  				Aluno de 3o ano de Ciência de Computadores da<br>
+	  				Faculdade de Ciências da Universidade do Porto
+	  			</p>
+	  			
+	  		</div>
+	  		
+	  		<div id="miguel">
+	  			<img id="miguelPhoto" src="miguel.png" height="200" alt="Miguel Pinto">
+	  			<p id="miguelID"> Miguel Serpa Pinto <br><br>
+	  				up201907273<br><br>
+	  				Aluno de 3o ano de Ciência de Computadores da<br>
+	  				Faculdade de Ciências da Universidade do Porto
+	  			</p>
+	  		</div>
+	  	</div>
+
+	  	<div id="instructionsPage">
+	  		<p id="htp">How to Play:<br><br><br>
+	  			O jogo contem um tabuleiro com um certo Nº de cavidades e as peças denominam-se de sementes.<br><br>
+
+				Cada jogador tem a sua cavidade (cavidades laterais), onde guarda as sementes que ganhou no decorrer do jogo.<br><br>
+				
+				No inicio do jogo, todas as cavidades centrais têm o mesmo número de sementes.<br><br>
+				
+				O primeiro jogador começa por optar uma cavidade do seu lado do tabuleiro e de seguida retira todas as sementes e pouse uma por cada cavidade à direita da inicial.<br><br>
+				
+				Se a cavidade seguinte for o seu armazém, deixar lá uma semente também. Caso sobrarem sementes, continuar no lado do adversário. Não é permitido deixar sementes na cavidade lateral do adversário. Se ainda tiver sementes, continuar do seu lado. Se a última semente for colocada for no seu próprio armazém, continuar a jogar.<br><br>
+				
+				Se a última semente calhar numa das suas cavidades vazia, transferir para a sua cavidade lateral as sementes nas cavidades do oponente e a última semente a ser pousada.<br><br>
+				
+				Jogo termina quando um dos jogadores não pode jogar, porque todas as suas cavidades estão vazias. Nesse momento cada jogador recolhe as sementes no seu lado do tabuleiro e conta-as.<br><br>
+				
+				Ganha quem tiver mais sementes.</p>
+	  	</div>
+
+	  	<div id="gameVSPC">
+	  		<h1> <img src="mancalaLogo.png" id="logoGamePC" alt="logo"></h1>
+	  		<div id="curGamePC" class="buttons">
+	  			<div id="divOasis1AI" class="buttons"></div>
+	  			<div id="playersAI">	
+	  				<div id="divPlayerPC" class="buttons"></div>
+	  				<div id="divPlayer" class="buttons"></div>
+	  			</div>
+	  			<div id="divOasis2AI" class="buttons"></div>
+	  		</div>
+	  	</div>
+
+	  	<div id="gameVSPlayer">
+	  		<h1> <img src="mancalaLogo.png" id="logoGamePlayers" alt="logo"></h1>
+	  		<h3 id="gameStatus">Turno: Player 1</h3>
+	  		<div id="curGamePlayer" class="buttons">
+	  			<div id="divOasis1" class="buttons"></div>
+	  			<div id="players">	
+	  				<div id="divPlayer1" class="buttons"></div>
+	  				<div id="divPlayer2" class="buttons"></div>
+	  			</div>
+	  			<div id="divOasis2" class="buttons"></div>
+	  		</div>
+	  	</div>
 
 	</body>
 </html>

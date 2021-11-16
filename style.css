@@ -1,7 +1,11 @@
 body{
-	background-image: url('Untitled-3.jpg');
+	background-image: linear-gradient(plum, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 	font-family: roboto;
 	font-size: large;
+	margin: 0px;
+    display: flex;
 }
 
 .button {
@@ -21,55 +25,80 @@ body{
 	background-color: purple;
   	border: 4px double black;
 }
-
-.loginContainer{
-	display: flex;
-  	justify-content: right;
-  	align-items: top;
+.infoButton{
+	border: none;
+	background-color: inherit;
+	color: plum;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+  	margin: 0px 0px;
+	cursor: pointer;
+	transform: skewX(-10deg) scale(1.3, 1.3);
+	transition-duration: 0.5s;
+}
+#loginContainer{
+	float: right;
+	position: relative;
+	right: 1%;
 }
 
-.loginContainer > button {
-  	margin: top;
+.buttons > button {
   	padding: 4px;
   	font-size: 15px;
   	font-family: roboto;
   	background-color: black;
   	color: ghostwhite;
-  	border-style: double;
   	border-radius: 5px;
-  	border-color: purple;
-  	border-width: 4px;
+  	border: 4px double purple;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	margin: 0px 0px;
+  	cursor: pointer;
+  	transform: skewX(-10deg) scale(1.3, 1.3);
+  	transition-duration: 0.5s;
 }
 
-#login{
-	position: absolute;
-	top: 0%;
-	right: 11%;
-}
-#register{
-	position: absolute;
-	top: 0%;
-	right: 0%;
+#entryScreen{
+	height: 100vh;
+	width: 100%;
 }
 
 h1{
 	display: inline-block;
-	width: 950px;
-	height: 45px;
+	width: 85%;
+	height: 10%;
 	font-style: italic;
 	text-align: center;
-	transform: scale(1.3, 1.3)
+	transform: scale(1.3, 1.3);
+}
+#login{
+	position: relative;
+	top: 0%;
+	right: 11%;
+}
+#register{
+	position: relative;
+	top: 0%;
+	right: 0%;
+}
+#logo{
+	height: 110%;
 }
 
-#entryScreen{
-	height: 1000px;
-	width: 1000px;
+#options{
+	position: relative;
+	top: 15%;
+	left: 4%;
+	height: 300px;
+	width: 500px;
 }
 
 #cavidades{
 	position: relative;
 	text-align: center;
-	left: 5%;
 	height: 30px;
 	width: 350px;
   	background-color: black;
@@ -88,8 +117,7 @@ h1{
 #sementes{
 	position: relative;
 	text-align: center;
-	top: 1.2%;
-	left: 5%;
+	top: 4%;
 	height: 40px;
 	width: 350px;
   	background-color: black;
@@ -102,7 +130,7 @@ h1{
 }
 #sementesP{
 	position: relative;
-	top: -37%;
+	top: -30%;
 }
 #sementesN{
 	width: 60px;
@@ -111,8 +139,7 @@ h1{
 #pc{
 	position: relative;
 	text-align: center;
-	top: 2.5%;
-	left: 5%;
+	top: 8%;
 	height: 35px;
 	width: 350px;
   	background-color: black;
@@ -132,8 +159,7 @@ h1{
 	display: none;
 	position: relative;
 	text-align: center;
-	top: 3.7%;
-	left: 5%;
+	top: 11.5%;
 	height: 35px;
 	width: 350px;
   	background-color: black;
@@ -144,7 +170,200 @@ h1{
   	border-width: 4px;
   	transform: skewX(-10deg) scale(1.3, 1.3);
 }
+
+#info{
+	display: flex;
+	position: relative;
+    bottom: -40%;
+	justify-content: center;
+}
+
+#aboutUs{
+	position: relative;
+	right: 1%;
+}
+#instructions{
+	position: relative;
+	left: 1%;
+}
+
+#aboutUsPage{
+	display: none;
+	position: relative;
+	width: 50vw;
+	height: 90vh;
+	left: 2%;
+}
+#ricardo{
+	position: relative;
+	width: 100%;
+	top: 10%;
+	display: flex;
+	background-color: black;
+  	transform: skewX(-10deg);
+  	border-radius: 10px;
+  	border-color: black;
+}
+#ricardoPhoto{
+  	transform: skewX(10deg) scale(1.2);
+}
+#ricardoID{
+	position: relative;
+	left: 30%;
+  	color: white;
+}
+#miguel{
+	position: relative;
+	width: 100%;
+	top: 20%;
+	display: flex;
+	background-color: black;
+  	transform: skewX(-10deg);
+  	border-radius: 10px;
+  	border-color: black;
+}
+#miguelPhoto{
+  	transform: skewX(10deg) scale(1.2);
+}
+#miguelID{
+	position: relative;
+	left: 30%;
+  	color: white;
+}
+#instructionsPage{
+	display: none;
+	position: relative;
+	width: 90%;
+	height: 100vh;
+	left: 5%;
+}
+#htp{
+	position: relative;
+	top: 10%;
+	text-align: center;
+	color: white;
+  	transform: skewX(-10deg);
+	background-color: black;
+  	border-radius: 10px;
+  	border-color: black;
+  	border-width: 1px;
+}
+
+
 #diffP{
 	position: relative;
 	top: -35%;
+}
+#gameStart{
+	display: none;
+	position: relative;
+	top: 30%;
+	left: 25%;
+}
+
+
+#registerScreen{
+	display: none;
+}
+#loginScreen{
+	display: none;
+}
+
+#gameVSPC{
+	display: none;
+	height: 100vh;
+	width: 90%;
+}
+#curGamePC{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+	position: relative;
+	top: 30%;
+	left: 10%;
+	height: 20%;
+	width: 60%;
+}
+#divOasis1AI{
+	position: relative;
+	height: 100%;
+	width: 8%;
+	white-space: pre-line;
+}
+#playersAI{
+	position: relative;
+    min-width: 0;
+    min-height: 0;
+    width: 90%;
+    height: 100%;
+}
+#divPlayerPC{
+	position: relative;
+	width: 100%;
+    right: -4.5%;
+}
+#divPlayer{
+	position: relative;
+	width: 100%;
+    left: -1.7%;
+    top:  65%;
+}
+#divOasis2AI{
+	position: relative;
+	height: 100%;
+	width: 8%;
+}
+
+
+#gameVSPlayer{
+	display: none;
+	height: 100vh;
+	width: 90%;
+}
+#gameStatus{
+	position: relative;
+	width: 40%;
+	left: 20%;
+	top: 5%;
+	font-style: italic;
+	text-align: center;
+	transform: scale(1.3, 1.3);
+}
+#curGamePlayer{
+	position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+	top: 10%;
+	left: 10%;
+	height: 20%;
+	width: 60%;
+}
+#divOasis1{
+	position: relative;
+	height: 100%;
+	width: 9%;
+	white-space: pre-line;
+}
+#players{
+	position: relative;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+}
+#divPlayer1{
+	position: relative;
+	width: 100%;
+    right: -4.5%;
+}
+#divPlayer2{
+	position: relative;
+	width: 100%;
+    left: -1.7%;
+    top:  65%;
+}
+#divOasis2{
+	position: relative;
+	height: 100%;
+	width: 9%;
 }
